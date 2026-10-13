@@ -1,0 +1,22 @@
+name: DashMeshView
+options:
+  bundleIdPrefix: com.meshview
+  deploymentTarget:
+    iOS: "16.0"
+packages:
+  KSPlayer:
+    url: https://github.com/kingslay/KSPlayer.git
+    exactVersion: 2.3.4
+targets:
+  DashMeshView:
+    type: application
+    platform: iOS
+    sources:
+      - Sources
+    dependencies:
+      - package: KSPlayer
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.meshview.dashmeshview
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsArbitraryLoads: YES
